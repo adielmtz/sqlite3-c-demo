@@ -74,6 +74,7 @@ int main(void)
     if (rc != SQLITE_OK) {
         const char *error = sqlite3_errmsg(connection);
         printf("Error (%d): %s\n", rc, error);
+        return 1;
     }
 
     // Setup database properties
